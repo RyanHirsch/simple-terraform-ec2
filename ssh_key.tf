@@ -1,0 +1,4 @@
+resource "aws_key_pair" "personal" {
+  key_name   = "personal-key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCb3WAeKhLIHfEe8kDM0C52jJe/mp99cVitjiCTjoNPyVNmVgASgMSx4EB2HEFWSh8exJs3I67D+6jaeerPrenJxpZO4SDpmofCAlHZwbpkIhiSo50f26vWTH+VMoOWshdOnQffGdRQXkorQAQGPAznjyfGk1G3K0XacAzcjFTQLtCNjMknqQXPWnio5vd80bw3IpEjTamMi1WewAowkC+S+zS7gf47wRT7snDa3/eBeO3HBGWq2HGzLk66LC4TJ9fMRd9zSbDAMxiOxGz6NMatitUsPoAVDbA4uRTWtseDF4QGgrVB6zJsYhyvILiGmUpT3TOp8viIrEcgTPYGbfQv"
+}
