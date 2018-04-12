@@ -29,14 +29,13 @@ resource "aws_instance" "web" {
 
   key_name = "${aws_key_pair.personal.key_name}"
 
-  user_data = <<HEREDOC
-  #!/bin/bash
-  curl -fsSL get.docker.com -o get-docker.sh
-  sudo sh get-docker.sh
-  sudo usermod -aG docker ubuntu
-HEREDOC
+  user_data = "${data.template_file.user_data.rendered}"
 
   tags {
     Name = "${local.prefix}-free"
   }
+}
+
+data "template_file" "user_data" {
+  template = "${file("docker_install.tpl")}"
 }
